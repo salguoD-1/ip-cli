@@ -10,13 +10,13 @@
 
 Para executar o código abaixo basta passar o comando ip seguido da flag --host e o url do site.
 
-```go
+```
 go run main.go ip --host url-do-site
 ```
 
 - Exemplo real:
 
-```go
+```
 go run main.go ip --host google.com
 ```
 
