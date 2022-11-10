@@ -60,7 +60,7 @@ func buscarIps(c *cli.Context) error {
 	// Passamos a flag host para a variável host
 	host := c.String("host")
 
-	// Pacote net é responsável por realizar a busca de IPs
+	// A função LookupIP() retorna um slice de IPs
 	ips, err := net.LookupIP(host)
 	if err != nil {
 		log.Fatal(err)
@@ -81,6 +81,7 @@ func buscarServidores(c *cli.Context) error {
 	host := c.String("host")
 
 	// NS = Name Server
+	// Busca o nome dos servidores de um determinado host
 	servidores, err := net.LookupNS(host)
 	// Tratamos o erro
 	if err != nil {
